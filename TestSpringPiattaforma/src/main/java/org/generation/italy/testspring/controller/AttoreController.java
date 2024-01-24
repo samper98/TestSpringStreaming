@@ -10,15 +10,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 @Controller
 @RequestMapping("/Attore")
-
 public class AttoreController {
-	
 		@Autowired
 		private AttoreRepository attoriRepository;
-		
 		@GetMapping("/elenco")
 		@ResponseBody
 		public String elencoAttori() {
@@ -35,6 +31,4 @@ public class AttoreController {
 			}
 			return elenco.toString();
 		}
-		
-		
 }

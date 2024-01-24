@@ -48,7 +48,7 @@ public class Regista {
 	public String toString() {
 		return "Regista [id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", nazionalita=" + nazionalita + "]";
 	}
-	
+
 	
 	
 }

@@ -33,7 +33,7 @@ public class Contenuto implements Comparable<Contenuto> {
 
 	@Column(nullable = false)
 	private Integer durata;
-
+	@JsonBackReference
 	@ManyToOne(optional = false)
 	private Regista regista;
 	
@@ -77,8 +77,11 @@ public class Contenuto implements Comparable<Contenuto> {
 		return durata;
 	}
 
-	public String getRegista() {
-		return regista.getNome() + " " + regista.getCognome();
+//	public String getRegista() {
+//		return regista.getNome() + " " + regista.getCognome();
+//	}
+	public Regista getRegista() {
+		return regista;
 	}
 	
 
@@ -100,6 +103,34 @@ public class Contenuto implements Comparable<Contenuto> {
 
 	public void setElencoAttori(List<Attore> elencoAttori) {
 		this.elencoAttori = elencoAttori;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public void setTitolo(String titolo) {
+		this.titolo = titolo;
+	}
+
+	public void setTipologia(String tipologia) {
+		this.tipologia = tipologia;
+	}
+
+	public void setGenere(String genere) {
+		this.genere = genere;
+	}
+
+	public void setAnnoDiProduzione(Integer annoDiProduzione) {
+		this.annoDiProduzione = annoDiProduzione;
+	}
+
+	public void setDurata(Integer durata) {
+		this.durata = durata;
+	}
+
+	public void setRegista(Regista regista) {
+		this.regista = regista;
 	}
 
 }
